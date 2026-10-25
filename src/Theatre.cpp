@@ -40,7 +40,16 @@ const Screen* Theatre::findScreenById(const std::string& screenId)const {
     return nullptr;
 }
 
-const Show* Theatre::findShowById(const std::string& showId)const {
+Show* Theatre::findShowById(const std::string& showId) {
+    for (auto& show : shows) {
+        if (show.getShowId() == showId) {
+            return &show;
+        }
+    }
+    return nullptr;
+}
+
+const Show* Theatre::findShowById(const std::string& showId) const {
     for (auto& show :shows){
         if(show.getShowId()==showId){
             return &show;

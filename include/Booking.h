@@ -16,8 +16,9 @@ class Booking {
     std::string showId;
      
     std::vector<std::string>seatIds;
-    double amount ;
+    double totalAmount;
     BookingStatus status;
+    
     public:
 
     Booking( const std::string& bookingId , const std::string&  showId , const std::vector<std::string>& seatIds, double totalAmount);

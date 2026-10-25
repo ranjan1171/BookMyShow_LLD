@@ -1,7 +1,7 @@
 #include "Show.h"
 #include "Screen.h"
 
-#include < string > 
+#include <string>
 #include <vector>
 
 
@@ -23,6 +23,7 @@ class Theatre{
     void addShow(const Show& show);
 
     const Screen* findScreenById(const std::string&  screenId) const ;
+    Show* findShowById(const std::string& showId);
     const  Show* findShowById( const std::string& showId) const ;
 
     std::string getTheatreId() const ;
